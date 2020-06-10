@@ -99,18 +99,20 @@ html {
   background-repeat: no-repeat;
   background-position: center;
 }
-.header-container{position: relative;}
+.header-container {
+  position: relative;
+}
 .hero {
   padding-top: 180px;
   padding-bottom: 225px;
   margin-bottom: 50px;
 }
 .navigation__container {
-  width: 100%;
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 99%;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
