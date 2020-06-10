@@ -74,12 +74,7 @@ html {
   padding: 0 10px;
   margin: 0 auto;
 }
-.align-centr {
-  text-align: center;
-}
-.uppercase {
-  text-transform: uppercase;
-}
+
 .background {
   background-image: -webkit-gradient(
       linear,
@@ -102,16 +97,15 @@ html {
     ),
     url(../images/background.jpg);
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center;
 }
-.relativ {
-  position: relative;
-}
+.header-container{position: relative;}
 .hero {
-  padding: 180px 0 225px;
+  padding-top: 180px;
+  padding-bottom: 225px;
   margin-bottom: 50px;
 }
-.header__container {
+.navigation__container {
   width: 100%;
   position: absolute;
   display: -webkit-box;
@@ -123,7 +117,7 @@ html {
   -webkit-box-align: baseline;
   -ms-flex-align: baseline;
   align-items: baseline;
-  margin-top: 22px;
+  padding-top: 22px;
 }
 .navigation__list {
   display: -webkit-box;
@@ -133,24 +127,31 @@ html {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  text-transform: uppercase;
 }
 .navigation__list-link,
-.item__title,
+.services__item-title,
 .team__item-name,
-.copyright
- {
+.copyright {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 1.4rem;
   color: rgb(51, 51, 51);
 }
-.team__item-name{margin-bottom: 12px;}
+.services__item-title {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.team__item-name {
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
 .navigation__list-link-icon {
   fill: rgb(255, 255, 255);
   width: 18px;
   height: 18px;
-  padding: 0 10px;
+  padding: 0 5px;
 }
 .navigation__list-link-icon:hover {
   fill: rgb(252, 227, 138);
@@ -173,12 +174,14 @@ html {
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
-.section__title,
+.services__title,
+.team__title,
 .hero__title {
   font-family: "Kaushan Script";
   font-style: normal;
   font-weight: 400;
   font-size: 2.4rem;
+  text-align: center;
   color: rgb(51, 51, 51);
 }
 
@@ -186,8 +189,9 @@ html {
   font-size: 7.2rem;
   margin-bottom: 80px;
 }
-.section__title-span,
-.hero__title-span,
+.services__title-different-style,
+.team__title-different-style,
+.hero__itle-different-style,
 .logo,
 .hero__link,
 .footer__form-btn {
@@ -197,38 +201,55 @@ html {
   font-size: 3rem;
   display: block;
 }
-.hero__title-span {
+.services__title-different-style,
+.team__title-different-style {
+  line-height: 6.3rem;
+  text-transform: uppercase;
+}
+.hero__title-different-style {
   font-size: 15rem;
+  text-transform: uppercase;
   line-height: 17rem;
 }
 .hero__link {
   font-size: 1.4rem;
   border: 3px solid;
-  border-color: transparent;
+  border-color: rgb(255, 255, 255);
   padding: 9px 0;
   max-width: 156px;
+  text-transform: uppercase;
+  text-align: center;
   margin: 0 auto;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 .hero__link:hover {
-  border-color: rgb(255, 255, 255);
+  -webkit-transform: scale(1.2, 1.2);
+  -ms-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
 }
 .logo,
 .navigation__list-link,
 .hero__title,
-.hero__title-span,
+.hero__title-different-style,
 .hero__link,
 .footer__form-btn {
   color: rgb(255, 255, 255);
 }
-.section__title::after {
+.services__title::after,
+.team__title::after {
   content: "";
   display: block;
   height: 3px;
   width: 60px;
   background-color: rgb(243, 129, 129);
-  margin: 30px auto 85px;
+  margin: 25px auto 62px;
 }
-.item__outline,
+.team__title::after {
+  margin: 20px auto 45px;
+}
+.services__item-outline,
 .team__paragraph {
   font-family: "Roboto";
   font-style: normal;
@@ -237,7 +258,11 @@ html {
   color: rgb(153, 153, 153);
 }
 .team__paragraph {
-  margin-bottom: 70px;
+  width: 80%;
+  line-height: 2rem;
+  margin: 0 auto;
+  margin-bottom: 92px;
+  text-align: center;
 }
 .services__list {
   display: -webkit-box;
@@ -258,15 +283,16 @@ html {
   display: flex;
 }
 .services__item:nth-child(-n + 3) {
-  margin-bottom: 120px;
+  margin-bottom: 105px;
 }
 .services__list-icon {
   width: 32px;
   height: 32px;
+  fill: rgb(149, 225, 211);
   margin-right: 28px;
 }
 .services {
-  margin-bottom: 110px;
+  margin-bottom: 97px;
 }
 .team__list {
   display: -webkit-box;
@@ -283,7 +309,7 @@ html {
   width: 100%;
   height: 1px;
   background-color: rgb(229, 229, 229);
-  margin-top: 85px;
+  margin-top: 80px;
 }
 .team__item-profession,
 .footer__input {
@@ -295,11 +321,12 @@ html {
 }
 .team__item {
   position: relative;
+  text-align: center;
 }
 
 .team__photo-wrapper {
   display: inline-block;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
   position: relative;
   -webkit-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
@@ -425,6 +452,7 @@ html {
   width: 250px;
   height: 40px;
   font-size: 1.4rem;
+  text-transform: uppercase;
   background-color: rgb(149, 225, 211);
 }
 .footer__form {
