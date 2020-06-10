@@ -191,9 +191,9 @@ html {
   font-size: 7.2rem;
   margin-bottom: 80px;
 }
-.services__title-different-style,
-.team__title-different-style,
-.hero__title-different-style,
+.services__title--different-style,
+.team__title--different-style,
+.hero__title--different-style,
 .logo,
 .hero__link,
 .footer__form-btn {
@@ -203,12 +203,12 @@ html {
   font-size: 3rem;
   display: block;
 }
-.services__title-different-style,
-.team__title-different-style {
+.services__title--different-style,
+.team__title--different-style {
   line-height: 6.3rem;
   text-transform: uppercase;
 }
-.hero__title-different-style {
+.hero__title--different-style {
   font-size: 15rem;
   text-transform: uppercase;
   line-height: 17rem;
@@ -234,7 +234,7 @@ html {
 .logo,
 .navigation__list-link,
 .hero__title,
-.hero__title-different-style,
+.hero__title--different-style,
 .hero__link,
 .footer__form-btn {
   color: rgb(255, 255, 255);
